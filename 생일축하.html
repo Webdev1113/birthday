@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>누군가의 생일을 축하하기 위해</title>
+    </head>
+    <body>
+        <style>
+            body {
+                background-color: bisque;
+            }
+            input[type=text] {
+                width: 150px;
+                height: 30px;
+            }
+            #name {
+                font-size: 30px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            #box{
+                position: relative;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, 30%);
+            }
+        </style>
+        <script>
+            function birthday() {
+                var name = document.getElementById('box').value;
+                document.getElementById('name').innerHTML = name + "의 생일을 축하합니다"; 
+            }
+        </script>
+        <div id = name> 당신의 이름은 무엇입니까?
+            <div>
+                <input type="text" id = box onchange="birthday()"></input>
+            </div>
+        </div>
+        <div>
+            
+        </div>
+    </body>
+</html>
